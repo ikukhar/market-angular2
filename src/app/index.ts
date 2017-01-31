@@ -1,17 +1,22 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {routing, RootComponent} from './routes';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { routing, RootComponent } from './routes';
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
 
-import {HelloComponent} from './hello';
+import { ProductsComponent } from './components/products/products.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   imports: [
     BrowserModule,
-    routing
+    routing,
+    MaterialModule.forRoot()
   ],
   declarations: [
     RootComponent,
-    HelloComponent
+    ProductsComponent,
+    NavbarComponent
   ],
   bootstrap: [RootComponent]
 })

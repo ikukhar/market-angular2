@@ -1,0 +1,15 @@
+<m-navbar></m-navbar>
+<h3>Products</h3>
+<ul class="products">
+  <li *ngFor="let product of products"
+    [class.selected]="product === selectedProduct"
+    (click)="onSelect(product)">
+    <span class="badge">{{product.id}}</span> {{product.name}}
+  </li>
+</ul>
+  <h2>
+    <div *ngIf="selectedProducts">
+    {{selectedProducts.name | uppercase}}
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

@@ -1,4 +1,4 @@
-import {HelloComponent} from './hello';
+import {HelloComponent} from './hello.component';
 import {TestBed, async} from '@angular/core/testing';
 
 describe('hello component', () => {
